@@ -49,6 +49,3 @@ def multiplicative_inverse(a, b):
 ## Test
 # d = multiplicative_inverse(15,26)
 # print(d)
-
-
-print(multiplicative_inverse(15, 26))
