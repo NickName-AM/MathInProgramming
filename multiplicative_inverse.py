@@ -35,7 +35,15 @@ def multiplicative_inverse(a, b):
             'xi' : xi,
             'yi' : yi,
         }
-    return d[n-1]['xi']
+    value = d[n-1]['xi']
+    
+    if value not in range(0,b):
+        if value > b:
+            value = value % b
+        else:
+            value = b - (abs(value) % b)
+    
+    return value
 
 
 ## Test
@@ -43,3 +51,4 @@ def multiplicative_inverse(a, b):
 # print(d)
 
 
+print(multiplicative_inverse(15, 26))
