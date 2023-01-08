@@ -1,4 +1,3 @@
-from multiplicative_inverse import multiplicative_inverse
 ## Find a number x such that
 ## x mod 5 = 2
 ## x mod 7 = 3
@@ -8,6 +7,8 @@ from multiplicative_inverse import multiplicative_inverse
 # How to find the above value?
 # a = find('2m5', '3m7', '1m8', '8m9')
 
+from multiplicative_inverse import multiplicative_inverse
+
 def find(*args):
     # Getting the remainder. 5 in '5m7'
     results = [int(i.split('m')[0]) for i in args]
@@ -15,7 +16,6 @@ def find(*args):
 
     # Getting the divisor. 7 in '5m7'
     divisors = [int(i.split('m')[1]) for i in args]
-
 
     # Multiplying divisors
     m = 1
@@ -41,6 +41,5 @@ def find(*args):
     return x
 
 
-# Tests
-# a = find('0m5', '2m6', '2m7', '10m11')
-# print(a)
+a = find('5m6', '4m11', '3m17')
+print(a)
